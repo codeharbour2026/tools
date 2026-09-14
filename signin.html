@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In - CodeHarbour Tools</title>
+
+<script src="config.js"></script>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#0f172a;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+width:350px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h1>Sign In</h1>
+
+<input id="email" type="email" placeholder="Email">
+
+<input id="password" type="password" placeholder="Password">
+
+<button id="signinBtn">
+Sign In
+</button>
+
+<p id="message"></p>
+</div>
+
+<script type="module">
+
+import { createClient }
+from "https://esm.sh/@supabase/supabase-js@2";
+
+const supabase = createClient(
+window.SUPABASE_URL,
+window.SUPABASE_ANON_KEY
+);
+
+document
+.getElementById("signinBtn")
+.addEventListener("click", async () => {
+
+const email =
+document.getElementById("email").value;
+
+const password =
+document.getElementById("password").value;
+
+const { error } =
+await supabase.auth.signInWithPassword({
+email,
+password
+});
+
+if(error){
+document.getElementById("message")
+.textContent = error.message;
+return;
+}
+
+window.location.href = "index.html";
+
+});
+
+</script>
+
+</body>
+</html>
