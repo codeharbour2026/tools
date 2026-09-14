@@ -1,112 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeHarbour Tools</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>codeharbour tools — free trackers, planners &amp; calculators</title>
+<meta name="description" content="Free browser-based tools for students, small businesses and anyone who wants their day organised. No sign-up, nothing saved to a server.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">🛠️ CodeHarbour Tools</div>
-
-        <nav>
-            <a href="#tools">Free Tools</a>
-            <a href="#custom">Custom Development</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Free Tools for Students, Schools & Small Businesses</h1>
-
-        <p>
-            Explore our growing collection of free productivity tools,
-            planners, trackers and calculators.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#tools" class="btn">Explore Tools</a>
-            <a href="#custom" class="btn secondary">Custom Tool</a>
-        </div>
-    </section>
-
-    <section id="tools" class="section">
-        <h2>Free Tools</h2>
-
-        <div class="tool-grid">
-
-            <div class="card">
-                <h3>📚 Assignment Tracker</h3>
-                <p>Track homework, projects and due dates.</p>
-                <button>Coming Soon</button>
-            </div>
-
-            <div class="card">
-                <h3>📝 Study Planner</h3>
-                <p>Create study schedules and stay organised.</p>
-                <button>Coming Soon</button>
-            </div>
-
-            <div class="card">
-                <h3>⏳ Exam Countdown</h3>
-                <p>Count down to your next assessment.</p>
-                <button>Coming Soon</button>
-            </div>
-
-            <div class="card">
-                <h3>🎤 Debate Timer</h3>
-                <p>Perfect for debating practice sessions.</p>
-                <button>Coming Soon</button>
-            </div>
-
-            <div class="card">
-                <h3>💰 Budget Planner</h3>
-                <p>Track spending and savings goals.</p>
-                <button>Coming Soon</button>
-            </div>
-
-            <div class="card">
-                <h3>✅ Habit Tracker</h3>
-                <p>Build positive habits and routines.</p>
-                <button>Coming Soon</button>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="custom" class="section custom">
-        <h2>Custom Tool Development</h2>
-
-        <p>
-            Need something unique? We can build custom dashboards,
-            calculators, planners and web applications.
-        </p>
-
-        <div class="pricing-card">
-            <h3>Starting From</h3>
-            <div class="price">$50</div>
-            <p>Custom web-based solutions designed around your needs.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Get In Touch</h2>
-
-        <p>
-            Interested in a custom tool?
-            Contact CodeHarbour to discuss your project.
-        </p>
-
-        <a class="contact-btn" href="mailto:your@email.com">
-            Contact Us
+<header class="nameplate">
+    <div class="container">
+        <a href="#top" class="brand">
+            <span class="brand-mark">CH</span>
+            <span class="brand-name">codeharbour<span>Free tools for school, work &amp; life</span></span>
         </a>
-    </section>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+            <li><a href="#top" aria-current="page">Home</a></li>
+            <li><a href="#student">Student</a></li>
+            <li><a href="#business">Business</a></li>
+            <li><a href="#productivity">Productivity</a></li>
+        </ul>
+    </div>
+</header>
 
-    <footer>
-        <p>© 2026 CodeHarbour Tools. All Rights Reserved.</p>
-    </footer>
+<section class="hero" id="top">
+    <div class="blueprint-grid" aria-hidden="true"></div>
+    <div class="container">
+        <div class="hero-copy">
+            <p class="eyebrow-note">56 tools and counting — always free, nothing to install</p>
+            <h1>Every tool you need, in one harbour.</h1>
+            <p class="lede">Trackers, planners and calculators for students, small businesses and anyone trying to keep their week under control. Everything runs right here in your browser.</p>
+            <div class="hero-buttons">
+                <a href="#student" class="btn btn-primary">Browse tools</a>
+                <a href="#productivity" class="btn btn-outline">Jump to productivity</a>
+            </div>
+        </div>
+        <div class="trace-wrap" aria-hidden="true">
+            <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg">
+                <path class="trace-line" d="M20 260 L20 180 L110 180 L110 100 L230 100 L230 40 L340 40" />
+                <circle class="trace-node n1" cx="110" cy="180" r="7"/>
+                <circle class="trace-node n2" cx="230" cy="100" r="7"/>
+                <circle class="trace-node n3" cx="340" cy="40" r="7"/>
+            </svg>
+        </div>
+    </div>
+</section>
 
+<section class="section-tight" style="background:var(--paper-raised); border-bottom:1px solid var(--line);">
+    <div class="container service-picker">
+        <div class="service-picker-grid">
+            <a href="#student">🎓 Student Tools</a>
+            <a href="#business">💼 Business Tools</a>
+            <a href="#productivity">⏱️ Productivity Tools</a>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="student">
+    <div class="container">
+        <div class="section-head">
+            <h2>🎓 Student Tools</h2>
+            <p>Tools designed to help students stay organised, manage their workload, and improve their study habits.</p>
+        </div>
+        <div class="ticket-grid" id="grid-student"></div>
+    </div>
+</section>
+
+<section class="section" id="business" style="background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="container">
+        <div class="section-head">
+            <h2>💼 Business Tools</h2>
+            <p>Tools that help small businesses, freelancers, clubs, and organisations manage operations and finances.</p>
+        </div>
+        <div class="ticket-grid" id="grid-business"></div>
+    </div>
+</section>
+
+<section class="section" id="productivity">
+    <div class="container">
+        <div class="section-head">
+            <h2>⏱️ Productivity Tools</h2>
+            <p>Tools focused on planning, organisation, focus, and personal productivity.</p>
+        </div>
+        <div class="ticket-grid" id="grid-productivity"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div><strong>codeharbour tools</strong> — built with plain HTML, CSS &amp; JS.</div>
+        <div>Everything is stored only in your browser. Nothing is uploaded anywhere.</div>
+    </div>
+</footer>
+
+<!-- ---------- Tool modal ---------- -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-head">
+            <div>
+                <div class="ticket-ref" id="modalRef">TOOL</div>
+                <h2 id="modalTitle">Tool name</h2>
+            </div>
+            <button class="modal-close no-print" id="modalClose" aria-label="Close">✕</button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="tools.js"></script>
 </body>
 </html>
