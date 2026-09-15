@@ -2,42 +2,62 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My Account</title>
-
-<script src="config.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My account | codeharbour tools</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>My Account</h1>
+<header class="nameplate">
+    <div class="container">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">CH</span>
+            <span class="brand-name">codeharbour<span>Free tools for school, work &amp; life</span></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#student">Student</a></li>
+            <li><a href="index.html#business">Business</a></li>
+            <li><a href="index.html#productivity">Productivity</a></li>
+        </ul>
+        <div class="nav-auth" id="navAuth"></div>
+    </div>
+</header>
 
-<p id="email">Loading...</p>
+<section class="page-header">
+    <div class="container">
+        <h1>My account</h1>
+        <p>Signed in as <span id="accountEmail">…</span></p>
+    </div>
+</section>
 
-<script type="module">
+<section class="section">
+    <div class="container">
+        <h2 class="section-subhead" style="margin-top:0;">⭐ Favourite tools</h2>
+        <div class="ticket-grid" id="favGrid"></div>
+        <p class="empty-note" id="favEmpty" style="display:none;">No favourites yet — tap the star on any tool card to save it here.</p>
 
-import { createClient }
-from "https://esm.sh/@supabase/supabase-js@2";
+        <h2 class="section-subhead">🕐 Recently used</h2>
+        <div class="ticket-grid" id="recentGrid"></div>
+        <p class="empty-note" id="recentEmpty" style="display:none;">Nothing opened yet — your last few tools will show up here.</p>
 
-const supabase = createClient(
-window.SUPABASE_URL,
-window.SUPABASE_ANON_KEY
-);
+        <div style="margin-top:40px;">
+            <button class="btn-nav filled" id="signOutBtn" type="button">Sign out</button>
+        </div>
+    </div>
+</section>
 
-const {
-data:{session}
-}
-=
-await supabase.auth.getSession();
+<footer>
+    <div class="container">
+        <div><strong>codeharbour tools</strong> — built with plain HTML, CSS &amp; JS.</div>
+        <div>Tool data stays in your browser. Signing in only syncs your favourite &amp; recently used tools.</div>
+    </div>
+</footer>
 
-if(!session){
-window.location.href = "signin.html";
-}
-
-document
-.getElementById("email")
-.textContent =
-session.user.email;
-
-</script>
-
+<script src="supabase-config.js"></script>
+<script src="tools-catalog.js"></script>
+<script type="module" src="account.js"></script>
+<script type="module" src="auth-nav.js"></script>
 </body>
 </html>

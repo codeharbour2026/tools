@@ -1494,3 +1494,23 @@ footer strong{ color:#fff; }
     .modal-head{ padding:20px 20px 14px; }
     .modal-body{ padding:20px 20px 26px; }
 }
+
+/* ---------- Favourite star toggle (tool cards) ---------- */
+
+.tool-ticket{ position:relative; }
+
+.fav-toggle{
+    position:absolute;
+    top:14px;
+    right:14px;
+    background:none;
+    border:none;
+    font-size:1.3rem;
+    line-height:1;
+    color:var(--line);
+    cursor:pointer;
+    padding:4px;
+}
+
+.fav-toggle:hover{ color:var(--amber-deep); }
+.fav-toggle.active{ color:var(--amber); }

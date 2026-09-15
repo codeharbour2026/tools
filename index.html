@@ -21,10 +21,8 @@
             <li><a href="#student">Student</a></li>
             <li><a href="#business">Business</a></li>
             <li><a href="#productivity">Productivity</a></li>
-            <div class="nav-auth"></div>
-            <script src="config.js"></script>
-            <script type="module" src="auth.js"></script>
         </ul>
+        <div class="nav-auth" id="navAuth"></div>
     </div>
 </header>
 
@@ -94,7 +92,7 @@
 <footer>
     <div class="container">
         <div><strong>codeharbour tools</strong> — built with plain HTML, CSS &amp; JS.</div>
-        <div>Everything is stored only in your browser. Nothing is uploaded anywhere.</div>
+        <div>Tool data stays in your browser. Signing in only syncs your favourite &amp; recently used tools. · <a href="account.html" style="color:#5a6377;">My account</a></div>
     </div>
 </footer>
 
@@ -114,6 +112,9 @@
 
 <div class="toast" id="toast"></div>
 
+<script src="supabase-config.js"></script>
+<script src="tools-catalog.js"></script>
 <script src="tools.js"></script>
+<script type="module" src="auth-nav.js"></script>
 </body>
 </html>
